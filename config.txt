@@ -1,0 +1,28 @@
+# This file contains configuration needed for course selection of JUST ONE student.
+# Make new config files for each student for multi selection feature. (you can rename filename to student's name for convineance ex. ali.txt)
+# Fill in the needed information: [host - term - std_num - passwd* - std_sel]
+# Do not change the variable names.
+
+
+# Sama amoozesh website (ex. https://amozesh.tabrizu.ac.ir)
+host =
+
+# Current Term code:
+# example: first sem of year 1400 -> 14001
+# example: second sem of year 1400 -> 14002
+term = 
+
+# Student number
+std_num = 
+
+# Password [** Password section can be left empty, but you will need to enter this field manually on the login page **]
+passwd = 
+
+# Fill in the course number and group number respectively.
+# example: 123456 1
+
+std_sel = [
+
+
+
+]
