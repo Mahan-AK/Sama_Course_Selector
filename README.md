@@ -4,23 +4,23 @@
 
 ## What does this script do?
 
-Course selection for Universities with SamaSoft system (سامانه آموزشی سما) has always been a major hassle for me and my colleages. This is due to the fact that this system requires an abundant amount of browser requests to select the courses (making the procedure very inefficent). This puts a unnecessarily large load on university's servers and usually results in the servers going down.
+Course selection for Universities with SamaSoft system (سامانه آموزشی سما) has always been a major hassle for me and my collegemates. This is due to the fact that this system requires an excessive amount of browser requests to select the courses (making the procedure very inefficent). This puts a unnecessarily large load on university's servers and usually results in the servers going down.
 
 This script aims to execute the procedure in a single request. It should take a few seconds to select all of your desired courses while putting much less load on the servers.
 
 ## Installation
 
-First, you'll need to clone this repository to your local drive:
+First, you'll need to clone this repository to your local drive via the following command:
 
 ```shell
 $ git clone https://github.com/Mahan-AK/sama-selector.git
 ```
 
-Alternatively, if you don;t have `git` installed, you can download the zip file for this repository and extract it.
+Alternatively, if you don't have `git` installed, you can download the zip file for this repository and extract it.
 
 ## Requirements
 
-This script is written in python 3 an requires selenium and requests libraries.
+This script is written in python 3 and requires selenium and requests libraries.
 
 You can install the required libraries by running the following command:
 
