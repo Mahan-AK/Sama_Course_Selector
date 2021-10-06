@@ -43,8 +43,10 @@ First, You will need to edit config.txt file and fill the required fields (you c
 | **host** | Sama main website |
 | **term** | Current term code</br>(Check config.txt for more info) |
 | **std_num** | Student ID |
-| **passwd**<sup>[1](#pass_foot)</sup> | Sama password |
+| **passwd**[^pass] | Sama password |
 | **std_sel** | List of desired courses to select |
+
+[^pass]: Providing a password in config file is not necessary (for privacy reasons), you can provide your password in the login page.
 
 Now we can run the code:
 
@@ -53,7 +55,7 @@ $ cd sama-selector
 $ python SamaCourseSelector.py -c CONFIG_FILE -t ACTION_TIME
 ```
 
-Program Usage<sup>[2](#time_foot)</sup>:
+Program Usage[^time]:
 
 ```
 Usage: python SamaCourseSelector.py -c path_to_config_file -t starting_time
@@ -65,7 +67,4 @@ Options:
 -c CONFIG_FILE  
 -t ACTION_TIME
 ```
-
-</br>
-<a name="pass_foot">1</a>: Providing a password in config file is not necessary (for privacy reasons), you can provide your password in the login page. </br>
-<a name="time_foot">2</a>: ACTION_TIME option should be provided in 24 hour format.
+[^time]: ACTION_TIME option should be provided in 24 hour format.
