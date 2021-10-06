@@ -1,7 +1,16 @@
-# Copyright 2021 by Mahan Akbari
-# All rights reserved.
-# This file is released under the "GPLv3 License Agreement". Please see the
-# LICENSE file that should have been included as part of this package.
+# Copyright (c) 2021 Mahan Akbari.
+# This file is part of Sama Course Selector
+# (see https://github.com/Mahan-AK/sama-selector).
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import time
 import datetime
