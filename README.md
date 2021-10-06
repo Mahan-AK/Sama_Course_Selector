@@ -68,3 +68,8 @@ Options:
 -t ACTION_TIME
 ```
 [^time]: ACTION_TIME option should be provided in 24 hour format.
+
+## Additional Notes
+
+I have only tested the script for sama system of University of Tabriz, but it should work with other sama based systems.
+If you happen to test it for other university, please [email me](mailto:m_akbari2000@yahoo.com?subject=[GitHub]%20Sama%20Course%20Selection%20Project) with the results.
