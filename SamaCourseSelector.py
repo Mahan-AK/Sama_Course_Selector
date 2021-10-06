@@ -1,3 +1,8 @@
+# Copyright 2021 by Mahan Akbari
+# All rights reserved.
+# This file is released under the "GPLv3 License Agreement". Please see the
+# LICENSE file that should have been included as part of this package.
+
 import time
 import datetime
 import requests
@@ -19,6 +24,8 @@ if not opts.config_file:
 
 config_file = opts.config_file
 action_time = opts.action_time
+
+print("Loading config info!... ", end='')
 
 config = {}
 
@@ -50,8 +57,8 @@ with open(config_file, 'r') as f:
         line = f.readline()
             
 config['host'] = config['host'].strip('/')
-        
-print("Loaded config info!")
+
+print("Done")
 
 driver = webdriver.Firefox(executable_path="./geckodriver")
 driver.get(f"{config['host']}/samaweb/Login.aspx")
@@ -76,7 +83,7 @@ else:
     if action_time == "now": print("Press enter when done...")
 
 if action_time != "now":
-    print("Waiting until starting time of Selection...")
+    print(f"Waiting until {action_time}...")
     
     t = datetime.datetime.today()
     hour = int(action_time.split(':')[0])
@@ -91,24 +98,24 @@ if action_time != "now":
             print(f"{int((target_time - datetime.datetime.now()).total_seconds())} seconds until action...", end='\r')
             time.sleep(1)
         else:
-            print("Time's up! Starting selection procedure...")            
+            print('\x1b[2K' + "Time's up! Starting selection procedure...")            
             driver.find_element_by_xpath('//*[@id="input"]').click()
             break
 
-print("Getting cookies...")
+print("Getting cookies... ", end='')
 
 ##### Must test if *ASPSESSIONID* cookie is actually needed
 ##### It probably is not
 
-cookie_check = lambda: any([x['name'].startswith('ASPSESSIONID') for x in driver.get_cookies()])
+cookie_check = lambda cookies: any([x['name'].startswith('ASPSESSIONID') for x in cookies])
 
 while True:
-    if driver.get_cookie('ASP.NET_SessionId') and driver.get_cookie('.ASPXAUTH') and cookie_check:
-        print("Grabbed Cookies!")
+    if driver.get_cookie('ASP.NET_SessionId') and driver.get_cookie('.ASPXAUTH') and cookie_check(driver.get_cookies()):
+        print("Done")
         driver.execute_script("window.stop();")
         break
 
-print(f"Current Cookies: {[c['name'] for c in driver.get_cookies()]}")
+# print(f"Current Cookies: {[c['name'] for c in driver.get_cookies()]}")
 
 print("Submitting selection request...")
 
@@ -148,5 +155,3 @@ with open(res_file, 'wb') as f:
     f.write(res.content)
 
 driver.get(f"file://{path.abspath(res_file)}")
-
-# driver.delete_all_cookies()
