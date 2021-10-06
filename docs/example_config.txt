@@ -5,24 +5,26 @@
 
 
 # Sama amoozesh website (ex. https://amozesh.tabrizu.ac.ir)
-host =
+host = https://amozesh.tabrizu.ac.ir
 
 # Current Term code:
 # example: first sem of year 1400 -> 14001
 # example: second sem of year 1400 -> 14002
-term = 
+term = 14001
 
-# Student ID
-std_num = 
+# Student number
+std_num = 975361420
 
-# Password ** Password section can be left empty, but you will need to enter this field manually on the login page **
-passwd = 
+# Password [** Password section can be left empty, but you will need to enter this field manually on the login page **]
+passwd = p4$$W0rD
 
 # Fill in the course number and group number respectively.
 # example: 123456 1
 
 std_sel = [
 
-
+513001 1
+513002 0
+8888052 8
 
 ]
