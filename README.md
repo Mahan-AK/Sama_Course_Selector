@@ -14,6 +14,7 @@ First, you'll need to clone this repository to your local drive via the followin
 
 ```shell
 $ git clone https://github.com/Mahan-AK/sama-selector.git
+$ cd sama-selector
 ```
 
 Alternatively, if you don't have `git` installed, you can download the zip file for this repository and extract it.
@@ -51,7 +52,6 @@ First, You will need to edit config.txt file and fill the required fields (you c
 Now we can run the code:
 
 ```shell
-$ cd sama-selector
 $ python SamaCourseSelector.py -c CONFIG_FILE -t ACTION_TIME
 ```
 
