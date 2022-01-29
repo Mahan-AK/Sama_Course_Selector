@@ -32,3 +32,6 @@ venv.bak/
 
 # testing
 testing_phase/
+ 
+# vscode
+workspace.code-workspace

@@ -107,19 +107,15 @@ if action_time != "now":
             print(f"{int((target_time - datetime.datetime.now()).total_seconds())} seconds until action...", end='\r')
             time.sleep(1)
         else:
+            time.sleep(10)
             print('\x1b[2K' + "Time's up! Starting selection procedure...")            
             driver.find_element_by_xpath('//*[@id="input"]').click()
             break
 
 print("Getting cookies... ", end='')
 
-##### Must test if *ASPSESSIONID* cookie is actually needed
-##### It probably is not
-
-cookie_check = lambda cookies: any([x['name'].startswith('ASPSESSIONID') for x in cookies])
-
 while True:
-    if driver.get_cookie('ASP.NET_SessionId') and driver.get_cookie('.ASPXAUTH') and cookie_check(driver.get_cookies()):
+    if driver.get_cookie('ASP.NET_SessionId') and driver.get_cookie('.ASPXAUTH'):
         print("Done")
         driver.execute_script("window.stop();")
         break
